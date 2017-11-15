@@ -81,6 +81,6 @@ include:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:gjbianco/gjbianco.github.com.git
+  repo: git@github.com:gjbianco/gjbianco.github.io.git
   branch: master
   ignore_hidden: false
