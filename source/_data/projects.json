@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Fruit Basket",
+    "url": "http://fruitbasket.io",
+    "desc": "Inventory tracker (mainly for Apple)."
+  },
+  {
+    "name": "game-genie",
+    "url": "https://github.com/gjbianco/game-genie",
+    "desc": "JavaScript library for en/decoding Game Genie codes."
+  },
+  {
+    "name": "metabolizer",
+    "url": "https://github.com/gjbianco/game-genie",
+    "desc": "ExpressJS middleware for exposing environment variables."
+  },
+  {
+    "name": "mvr",
+    "url": "https://github.com/gjbianco/mvr",
+    "desc": "The minimal plugin for quickly surfing reddit."
+  }
+]
