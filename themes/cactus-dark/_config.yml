@@ -1,8 +1,11 @@
 nav:
   Home: /
-  About: /about/
+  # About: /about/
   Writing: /archives/
+  Games: https://gbianco.itch.io/
   Projects: http://github.com/gjbianco
+
+# hexo new page about
 
 projects_url: http://github.com/gjbianco
 
