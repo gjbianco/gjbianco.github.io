@@ -47,6 +47,10 @@ Mocha is a test runner (so for actually setting up and running the tests). Chai 
 
 If you need code coverage, you can set up Istanbul to run with mocha. You don't really have to learn much for Istanbul.
 
+UPDATE: Probably just use Jest (https://facebook.github.io/jest/).
+
 ## Front end frameworks (Angular, React, etc.)
 
 You should have a basic understanding of JavaScript and simple server side code before you start writing frontend code since most of the new ones will use AJAX to make calls to the backend. Personally, I prefer Angular 1.x, and am now learning Vue.js.
+
+UPDATE: Personal preference learning is leaning towards React, now that it is MIT licensed.
