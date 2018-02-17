@@ -23,5 +23,5 @@ Keep in mind that I do not plan to implement everything or even most of what is 
 
 ## links
 GitHub: [https://github.com/gjbianco/mvr](https://github.com/gjbianco/mvr)
-Chrome: coming soon
+Chrome: [https://chrome.google.com/webstore/detail/mvr/khpjlkbgdpdbjmcoobijkbfjjhaolioo](https://chrome.google.com/webstore/detail/mvr/khpjlkbgdpdbjmcoobijkbfjjhaolioo)
 Safari: coming soon
