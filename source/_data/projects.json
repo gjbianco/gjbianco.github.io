@@ -18,5 +18,15 @@
     "name": "mvr",
     "url": "https://github.com/gjbianco/mvr",
     "desc": "The minimal plugin for quickly surfing reddit."
+  },
+  {
+    "name": "hubot-simple-attendance",
+    "desc": "Hubot plugin for tracking who is in the office.",
+    "url": "https://github.com/gjbianco/hubot-simple-attendance"
+  },
+  {
+    "name": "hubot-simple-trivia",
+    "desc": "Hubot plugin for playing trivia.",
+    "url": "https://github.com/gjbianco/hubot-simple-trivia"
   }
 ]
