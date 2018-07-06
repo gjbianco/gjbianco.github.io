@@ -21,7 +21,7 @@
   },
   {
     "name": "hubot-simple-attendance",
-    "desc": "Hubot plugin for tracking who is in the office.",
+    "desc": "Hubot plugin to track who's in the office.",
     "url": "https://github.com/gjbianco/hubot-simple-attendance"
   },
   {
