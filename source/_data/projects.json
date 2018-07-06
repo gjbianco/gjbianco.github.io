@@ -25,6 +25,11 @@
     "url": "https://github.com/gjbianco/hubot-simple-attendance"
   },
   {
+    "name": "hubot-sayings",
+    "desc": "Hubot plugin to store sayings and phrases.",
+    "url": "https://github.com/gjbianco/hubot-sayings"
+  },
+  {
     "name": "hubot-simple-trivia",
     "desc": "Hubot plugin for playing trivia.",
     "url": "https://github.com/gjbianco/hubot-simple-trivia"
