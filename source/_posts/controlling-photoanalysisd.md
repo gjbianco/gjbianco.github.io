@@ -80,7 +80,7 @@ Replacing <uid> with your user's UID. For example, if your UID was 123, you'd ad
 
 Now save the file with ^o (Control + o) and then Enter.
 
-Close the editor with ^ (Control + x).
+Close the editor with ^x (Control + x).
 
 ## Closing Thoughts
 
