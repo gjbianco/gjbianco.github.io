@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="IntroductionLately, I keep reading articles about how the JavaScript ecosystem has too many libraries, which creates a steep learning curve. A lot seem to be purely dismissive without offering a real">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript Simplicity">
+<meta property="og:url" content="http://gbian.co/2017/02/28/JavaScript-Simplicity/index.html">
+<meta property="og:site_name" content="Guy Bianco IV">
+<meta property="og:description" content="IntroductionLately, I keep reading articles about how the JavaScript ecosystem has too many libraries, which creates a steep learning curve. A lot seem to be purely dismissive without offering a real">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-18T12:25:34.104Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript Simplicity">
+<meta name="twitter:description" content="IntroductionLately, I keep reading articles about how the JavaScript ecosystem has too many libraries, which creates a steep learning curve. A lot seem to be purely dismissive without offering a real">
+    
+    
+    <!-- title -->
+    <title>JavaScript Simplicity</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://gbianco.itch.io/">Games</a></li>
+         
+          <li><a href="http://github.com/gjbianco">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2018/02/16/mvr-update-new-version-and-Chrome-support/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/11/24/JavaScript-A-Repair-Guide/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://gbian.co/2017/02/28/JavaScript-Simplicity/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&text=JavaScript Simplicity"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&is_video=false&description=JavaScript Simplicity"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JavaScript Simplicity&body=Check out this article: http://gbian.co/2017/02/28/JavaScript-Simplicity/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&name=JavaScript Simplicity&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript"><span class="toc-number">2.</span> <span class="toc-text">JavaScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-js"><span class="toc-number">3.</span> <span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Express"><span class="toc-number">4.</span> <span class="toc-text">Express</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mocha-and-Chai"><span class="toc-number">5.</span> <span class="toc-text">Mocha and Chai</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-end-frameworks-Angular-React-etc"><span class="toc-number">6.</span> <span class="toc-text">Front end frameworks (Angular, React, etc.)</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        JavaScript Simplicity
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Guy Bianco IV</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-02-28T18:54:55.000Z" itemprop="datePublished">2017-02-28</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Lately, I keep reading articles about how the JavaScript ecosystem has too many libraries, which creates a steep learning curve. A lot seem to be purely dismissive without offering a real solution. Others are pushing projects to address this issue, but never explain how their solution is actually a <em>good</em> one. If anything, isn’t it counterintuitive to use a tool to address the problem of too many tools?</p>
+<p>In fact, that idea is what I want to talk about.</p>
+<p>It is very easy to get caught up in the never-ending spiral of “this tool doesn’t do X, so I will get tool Y to fix that”. Having an ecosystem with all sorts of tools for almost any problem is a blessing and a curse. It’s great to have access to so many good libraries, but a growing list of dependencies often is more work than necessary. Moderation is key.</p>
+<p>At the core of this issue is the idea that you have to use the latest, greatest, and “sexiest” frameworks in every single project you do. This is a very naive approach to coding, in general.</p>
+<p>There are plenty of adages and sayings against dependency creep (e.g. “less is more”, “keep it simple, stupid”). Basically, only include dependencies that you know will have positive returns on your development time and effort. Don’t just blindly use a library because it’s new or popular.</p>
+<p>However, maybe that means it is worth looking into. Just keep in mind that you’ll need some time to learn the tool. You may even need to learn the tool just to determine if it helps you. If that’s the case, make sure you aren’t treating everything like a nail with your new hammer.</p>
+<p>If you are completely new to the ecosystem, it can be hard to determine a simple set of dependencies that will have those high returns.</p>
+<p>Below is a list (in order!) of basic tools you should start with. I will try to include the name of appropriate “workshoppers” from <a href="https://nodeschool.io/" target="_blank" rel="noopener">NodeSchool</a>. A workshopper is a collection of lessons that require you to do a small lab after each lesson. This practice is crucial for actually learning material.</p>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><p>It may seem silly for me to include this here. If you take away nothing else from this post, take this: learn the fundamentals of JavaScript before trying to use it. I see so many people making the poor assumption that JavaScript <em>works</em> like other languages just because it <em>looks</em> like them. This is simply not true. A lot of people skip getting familiar with JavaScript and jump directly into their framework of choice. This accounts for most of the bad JavaScript code out there.</p>
+<p>I highly recommend reading <code>JavaScript: The Good Parts</code> by Douglas Crockford. You don’t have to understand every little function that gets listed, but you should be aware how things like scopes and hoisting work.</p>
+<p>Applicable workshoppers: <code>javascripting</code>, <code>scope-chains-closures</code>, <code>js-best-practices</code></p>
+<h2 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h2><p>Yes, this is different from learning JavaScript. Node is built on top of JS. That means there are plenty of functions, built in libraries, and techniques that are Node specific for you to learn. </p>
+<p>Applicable workshoppers: <code>learnyounode</code>, <code>how-to-npm</code>, <code>stream-adventure</code></p>
+<h2 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h2><p>This is by far the most common Node module for setting up REST services. Express allows you to set up basic routes using a fantastic yet simple API. </p>
+<p>Applicable workshoppers: <code>expressworks</code></p>
+<h2 id="Mocha-and-Chai"><a href="#Mocha-and-Chai" class="headerlink" title="Mocha and Chai"></a>Mocha and Chai</h2><p>Mocha is a test runner (so for actually setting up and running the tests). Chai is an assertion library, which means it is used to do the actual checks (e.g. to make sure a return value is a number greater than 0). Just by using these two, you have a very powerful unit testing framework.</p>
+<p>If you need code coverage, you can set up Istanbul to run with mocha. You don’t really have to learn much for Istanbul.</p>
+<p>UPDATE: Probably just use Jest (<a href="https://facebook.github.io/jest/)" target="_blank" rel="noopener">https://facebook.github.io/jest/)</a>.</p>
+<h2 id="Front-end-frameworks-Angular-React-etc"><a href="#Front-end-frameworks-Angular-React-etc" class="headerlink" title="Front end frameworks (Angular, React, etc.)"></a>Front end frameworks (Angular, React, etc.)</h2><p>You should have a basic understanding of JavaScript and simple server side code before you start writing frontend code since most of the new ones will use AJAX to make calls to the backend. Personally, I prefer Angular 1.x, and am now learning Vue.js.</p>
+<p>UPDATE: Personal preference learning is leaning towards React, now that it is MIT licensed.</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://gbianco.itch.io/">Games</a></li>
+         
+          <li><a href="http://github.com/gjbianco">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript"><span class="toc-number">2.</span> <span class="toc-text">JavaScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Node-js"><span class="toc-number">3.</span> <span class="toc-text">Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Express"><span class="toc-number">4.</span> <span class="toc-text">Express</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mocha-and-Chai"><span class="toc-number">5.</span> <span class="toc-text">Mocha and Chai</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-end-frameworks-Angular-React-etc"><span class="toc-number">6.</span> <span class="toc-text">Front end frameworks (Angular, React, etc.)</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://gbian.co/2017/02/28/JavaScript-Simplicity/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&text=JavaScript Simplicity"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&is_video=false&description=JavaScript Simplicity"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JavaScript Simplicity&body=Check out this article: http://gbian.co/2017/02/28/JavaScript-Simplicity/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&title=JavaScript Simplicity"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://gbian.co/2017/02/28/JavaScript-Simplicity/&name=JavaScript Simplicity&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Guy Bianco IV
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://gbianco.itch.io/">Games</a></li>
+         
+          <li><a href="http://github.com/gjbianco">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+

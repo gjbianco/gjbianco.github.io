@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="(Originally posted on the Red Hat Developers Blog: http://developers.redhat.com/blog/2016/04/27/javascript-a-repair-guide/) IntroductionYou’re a web developer. It’s likely that you have written some o">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript: A Repair Guide">
+<meta property="og:url" content="http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/index.html">
+<meta property="og:site_name" content="Guy Bianco IV">
+<meta property="og:description" content="(Originally posted on the Red Hat Developers Blog: http://developers.redhat.com/blog/2016/04/27/javascript-a-repair-guide/) IntroductionYou’re a web developer. It’s likely that you have written some o">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-18T12:25:34.104Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript: A Repair Guide">
+<meta name="twitter:description" content="(Originally posted on the Red Hat Developers Blog: http://developers.redhat.com/blog/2016/04/27/javascript-a-repair-guide/) IntroductionYou’re a web developer. It’s likely that you have written some o">
+    
+    
+    <!-- title -->
+    <title>JavaScript: A Repair Guide</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://gbianco.itch.io/">Games</a></li>
+         
+          <li><a href="http://github.com/gjbianco">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/02/28/JavaScript-Simplicity/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&text=JavaScript: A Repair Guide"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&is_video=false&description=JavaScript: A Repair Guide"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JavaScript: A Repair Guide&body=Check out this article: http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&name=JavaScript: A Repair Guide&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#You’re-writing-bad-JavaScript"><span class="toc-number">2.</span> <span class="toc-text">You’re writing bad JavaScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scopes"><span class="toc-number">3.</span> <span class="toc-text">Scopes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hoisting"><span class="toc-number">4.</span> <span class="toc-text">Hoisting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Function-Declarations-VS-Function-Expressions"><span class="toc-number">5.</span> <span class="toc-text">Function Declarations VS Function Expressions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Isolating-Your-Scripts"><span class="toc-number">6.</span> <span class="toc-text">Isolating Your Scripts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Miscellaneous-Tips"><span class="toc-number">7.</span> <span class="toc-text">Miscellaneous Tips</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        JavaScript: A Repair Guide
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Guy Bianco IV</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2016-11-24T18:51:25.000Z" itemprop="datePublished">2016-11-24</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>(Originally posted on the Red Hat Developers Blog: <a href="http://developers.redhat.com/blog/2016/04/27/javascript-a-repair-guide/" target="_blank" rel="noopener">http://developers.redhat.com/blog/2016/04/27/javascript-a-repair-guide/</a>)</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>You’re a web developer. It’s likely that you have written some of that nasty front-end JavaScript (JS) stuff. You probably wish your code would just work how you expect and you wonder why buttons get moved across the page, or disappear, when all you were trying to do is validate a form. Part of that is probably your Cascading Style Sheets (CSS); however, it’s just as likely that…</p>
+<h2 id="You’re-writing-bad-JavaScript"><a href="#You’re-writing-bad-JavaScript" class="headerlink" title="You’re writing bad JavaScript"></a>You’re writing bad JavaScript</h2><p>This is the part where you tell me all about how JavaScript is a horrible language, all about how it does “this and that” wrong, and that I’m some sort of hipster wannabe developer for using it, much less liking it.</p>
+<p>I could respond in kind about how, yes, there are some bad parts to JavaScript, or that there are certain parts that are really neat and worthwhile (there are!) – not to mention, you can write poor code in any language – but we’ll save that for another day. For right now, you have a script that is breaking your page, and, like it or not, you are stuck using JavaScript. You might as well learn how to fix some of those bad habits that are costing you so much time and headache.</p>
+<p>Without further ado, let’s get into…</p>
+<h2 id="Scopes"><a href="#Scopes" class="headerlink" title="Scopes"></a>Scopes</h2><p>JavaScript (JS) uses C-style blocks for its syntax. This trips up a lot of new JS developers as they assume those blocks mean scoping works the same way as in similarly-styled languages (and they would be wrong).</p>
+<p>An iterating variable in your for-loop is available to everything inside your function! What’s worse is that you probably have it right inside of a script by itself, and that you probably haven’t defined a function at all. This means that your iterating variable is essentially global to your page.</p>
+<p>One common error is forgetting to add the var keyword in front of your variable declarations. In this case, the variable goes on the global scope! Basically, for similar reasons as above (scope pollution), you don’t want to do this. Be sure to use var to declare all of your variables!</p>
+<p>For example, let’s say I have a script I’m including on a page that simply has the following:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// position A</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> count = <span class="number">0</span>; count &lt; <span class="number">10</span>; count++) &#123;</span><br><span class="line">  <span class="comment">// position B</span></span><br><span class="line">  alert(<span class="string">'counter is at '</span> + count);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> hidden = <span class="string">'bar'</span>;</span><br><span class="line">  <span class="comment">// position C</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// position D</span></span><br></pre></td></tr></table></figure>
+<p>In which positions is count found on my scope? Surprise, all of them! In JS, code blocks do not create a new scope, but functions do. So, the code block for my for-loop is not creating a new scope. As written above, I could reference count anywhere in the entire script.</p>
+<p>But what about the variable named hidden? Where is that available? Since it is declared only in the foo function, it is only available at position C.<br>Now, even if you understand why count is found at B and C, you might still be confused as to why it’s available at A.</p>
+<p>That brings us to the topic of…</p>
+<h2 id="Hoisting"><a href="#Hoisting" class="headerlink" title="Hoisting"></a>Hoisting</h2><p>This is where we really venture out of the realm of most C-style languages. The JavaScript interpreter does something pretty counter-intuitive when it hits a function containing the varkeyword. For every variable declaration, the interpreter “hoists” that declaration to the beginning of the scope (the function) and initializes it as undefined. They are hoisted in the same order as they appear in the scope. Let’s look at that same snippet from the first example, but this time we’ll display it as the interpreter sees it.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> count = <span class="literal">undefined</span>;</span><br><span class="line"><span class="comment">// position A</span></span><br><span class="line"><span class="keyword">for</span>(count = <span class="number">0</span>; count &lt; <span class="number">10</span>; count++) &#123;</span><br><span class="line">  <span class="comment">// position B</span></span><br><span class="line">  alert(<span class="string">'counter is at '</span> + count);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> hidden = <span class="literal">undefined</span>;</span><br><span class="line">  hidden = <span class="string">'bar'</span>;</span><br><span class="line">  <span class="comment">// position C</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// position D</span></span><br></pre></td></tr></table></figure>
+<p>Reordering the statements makes it a lot easier to see how count is available at all 4 positions. This is also the reason why it is common for people to declare all of their variables at the top of a function (leaving off the “ = undefined” initialization, since it’s redundant).</p>
+<h2 id="Function-Declarations-VS-Function-Expressions"><a href="#Function-Declarations-VS-Function-Expressions" class="headerlink" title="Function Declarations VS Function Expressions"></a>Function Declarations VS Function Expressions</h2><p>In the previous examples, we defined a function called foo. This is a pretty common syntax for writing named functions. However, one of the more powerful features of JS is treating functions like first-class citizens. Specifically, JS lets us define a function pretty much anywhere. These are called Lambda functions, which is a fancy term for anonymous functions (you know, ‘cause they don’t have names).</p>
+<p>Let’s take a look at some code that you may be familiar with. Specifically, this snippet runs our function every 5 seconds.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">'hello world'</span>);</span><br><span class="line">&#125;, <span class="number">5000</span>);</span><br></pre></td></tr></table></figure>
+<p>This is a very basic example of an anonymous function in JavaScript. The arguments to setInterval are a new function (a “callback function”) that we have defined in-line and the number of milliseconds between each call to that function.</p>
+<p>Our function doesn’t have a name, but we can optionally give it one for debugging purposes by specifying a name directly after the function keyword. This function, when run, simply alerts the user with our message. Keep in mind that the function doesn’t actually run at this point — it has only been defined; the user won’t see our alert until 5 seconds have gone by (the first timer interval), and then continually every 5 seconds.</p>
+<p>Passing functions around in this manner is very common, as a lot of JavaScript APIs expect you to pass functions as callbacks; this is a strategy commonly used to perform asynchronous work.</p>
+<p>It’s not obvious, but there are some important differences between our foo function and our most recent anonymous function. The biggest difference is that foo is an example of a function declaration and our anonymous function is an example of a function expression.</p>
+<p>Let’s look at a more direct comparison:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">'foo ran'</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">'bar ran'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Both of these definitions assign a function to a variable, which can be called just like any other function (i.e. <code>foo()</code> ). Again, the first is a function expression and the second is a function declaration.</p>
+<p>Even more important is the concept of how hoisting applies to each of these function definition techniques:</p>
+<ul>
+<li>For a function declaration – <code>function bar() { ... }</code>: The entire function (including the function body) gets hoisted to the top.</li>
+<li>For a function expression – <code>var foo = function() { ... }</code>: This is really just variable assignment in disguise; only the variable declaration (<code>var foo</code>) gets hoisted (no function body).</li>
+</ul>
+<p>Again, let’s look at how the interpreter sees this:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">'bar ran'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> foo = <span class="literal">undefined</span>;</span><br><span class="line"></span><br><span class="line">foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="string">'foo ran'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Okay, time to finally circle back to see how all of this affects…</p>
+<h2 id="Isolating-Your-Scripts"><a href="#Isolating-Your-Scripts" class="headerlink" title="Isolating Your Scripts"></a>Isolating Your Scripts</h2><p>Now that we understand some of the “less intuitive” parts of scopes in JS, we can begin to clean up our scripts. Chances are that you’ve run into at least one issue with your scripts that was caused by improper scoping.</p>
+<p>Let’s say we have a basic HTML page with several scripts and that those scripts get loaded and run in the same order that they are declared; however, even though they are declared in different files, they all actually run within the same scope! What that means is that if one script assigns the value <code>foo</code> to a variable called a, then another script assigns the value <code>bar</code> to a variable called a, any future references to a within the first script will resolve to the value <code>bar</code>. Both of the a’s are really the same variable, even though they are declared separately in two scripts! Let’s look at an example.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// script 1</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">"foo"</span>;</span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(a);</span><br><span class="line">&#125;, <span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// script 2</span></span><br><span class="line"><span class="keyword">var</span> a = <span class="string">"bar"</span>;</span><br></pre></td></tr></table></figure>
+<p>In this case, we have both scripts included in our HTML page and in the above order. What will our alert tell us? Since the second script runs before the function actually gets called, it has a chance to change the variable. Our alert actually tells us <code>bar</code>, which is probably not what we intended.</p>
+<p>How do we fix this?</p>
+<p>The easiest way to fix this is to move our variable declaration in script 1. This moves the a for our alert out of the global scope.</p>
+<p>Our script 1 now looks like the following:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// script 1</span></span><br><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> a = <span class="string">"foo"</span>;</span><br><span class="line">  alert(a);</span><br><span class="line">&#125;, <span class="number">5000</span>);</span><br></pre></td></tr></table></figure>
+<p>This ensures that a resolves to <code>foo</code> every time our function runs. Beyond that, it does not change the value of a in script 2 since we are declaring a new a within our new scope (the anonymous function). This is the best way to keep the scopes of our scripts isolated – using functions as scoping barriers.<br>The cool thing is that you can declare and run an anonymous function pretty easily. All it requires is some parentheses:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> hidden = <span class="string">"i'm completely unavailable outside of this script/function!"</span>;</span><br><span class="line">  alert(hidden);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p>In our above example, hidden is, in fact, only available within the confines of that anonymous function; an anonymous function that we call immediately after defining it is referred to as an Immediately-Invoked Function Expression (IIFE), and that is what we are doing in this example.</p>
+<p>Using an IIFE, we can (and should!) isolate all of our scripts’ scopes from one another.</p>
+<h2 id="Miscellaneous-Tips"><a href="#Miscellaneous-Tips" class="headerlink" title="Miscellaneous Tips"></a>Miscellaneous Tips</h2><p>In order to keep up with your var usage (and other gotchas), I would recommend using some form of “linter” on your code (e.g. jshint). A “linter”, simply put, analyzes your code for bad things and warns you about them; there are lint plugins available for most text editors and IDEs.</p>
+<p>It is also a good idea to lint your scripts as part of your build, but that is outside the scope of this article.</p>
+<p>You may have seen scripts that contain “use strict”; at the top; this puts the interpreter into strict mode (if supported). Strict mode is not supported in all browsers, but it can be helpful for preventing certain errors, so you probably want to use it. If you use it in conjunction with the immediately-called anonymous function above, you should include the “use strict” line within that function; otherwise, you set all scripts after that point to run in strict mode, not just your own script (or even ones that you wrote!). This could cause unexpected behavior depending on how those scripts were written.</p>
+<p>For information on what changes strict mode introduces, refer to the W3 schools article on it.</p>
+<p>You are now ready to go and face your scripts with a new understanding of JavaScript scopes, hoisting, and should have a few tips to keep your global scope clean. Beyond these techniques, just remember that JavaScript is its own programming language. As tempting as it might be, don’t assume that it works like another language just because it looks like one. You’ll be safer in the long run.</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://gbianco.itch.io/">Games</a></li>
+         
+          <li><a href="http://github.com/gjbianco">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#You’re-writing-bad-JavaScript"><span class="toc-number">2.</span> <span class="toc-text">You’re writing bad JavaScript</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scopes"><span class="toc-number">3.</span> <span class="toc-text">Scopes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hoisting"><span class="toc-number">4.</span> <span class="toc-text">Hoisting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Function-Declarations-VS-Function-Expressions"><span class="toc-number">5.</span> <span class="toc-text">Function Declarations VS Function Expressions</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Isolating-Your-Scripts"><span class="toc-number">6.</span> <span class="toc-text">Isolating Your Scripts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Miscellaneous-Tips"><span class="toc-number">7.</span> <span class="toc-text">Miscellaneous Tips</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&text=JavaScript: A Repair Guide"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&is_video=false&description=JavaScript: A Repair Guide"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=JavaScript: A Repair Guide&body=Check out this article: http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&title=JavaScript: A Repair Guide"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://gbian.co/2016/11/24/JavaScript-A-Repair-Guide/&name=JavaScript: A Repair Guide&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Guy Bianco IV
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://gbianco.itch.io/">Games</a></li>
+         
+          <li><a href="http://github.com/gjbianco">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
