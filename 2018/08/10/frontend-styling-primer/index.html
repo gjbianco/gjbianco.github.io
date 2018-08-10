@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Basics of Interface DesignStyling guidelinesConsistency is keyFirst and foremost, be consistent. The more consistent you are, the less lessons the user has to learn and keep in their head (cognitive l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Frontend Styling Primer">
+<meta property="og:url" content="http://gbian.co/2018/08/10/frontend-styling-primer/index.html">
+<meta property="og:site_name" content="Guy Bianco IV">
+<meta property="og:description" content="Basics of Interface DesignStyling guidelinesConsistency is keyFirst and foremost, be consistent. The more consistent you are, the less lessons the user has to learn and keep in their head (cognitive l">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-10T09:57:40.129Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Frontend Styling Primer">
+<meta name="twitter:description" content="Basics of Interface DesignStyling guidelinesConsistency is keyFirst and foremost, be consistent. The more consistent you are, the less lessons the user has to learn and keep in their head (cognitive l">
+    
+    
+    <!-- title -->
+    <title>Frontend Styling Primer</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://gbianco.itch.io/">Games</a></li>
+         
+          <li><a href="http://github.com/gjbianco">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/07/29/controlling-photoanalysisd/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://gbian.co/2018/08/10/frontend-styling-primer/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://gbian.co/2018/08/10/frontend-styling-primer/&text=Frontend Styling Primer"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gbian.co/2018/08/10/frontend-styling-primer/&is_video=false&description=Frontend Styling Primer"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Frontend Styling Primer&body=Check out this article: http://gbian.co/2018/08/10/frontend-styling-primer/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://gbian.co/2018/08/10/frontend-styling-primer/&name=Frontend Styling Primer&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Basics-of-Interface-Design"><span class="toc-number">1.</span> <span class="toc-text">Basics of Interface Design</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Styling-guidelines"><span class="toc-number">1.1.</span> <span class="toc-text">Styling guidelines</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Consistency-is-key"><span class="toc-number">1.1.1.</span> <span class="toc-text">Consistency is key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Don’t-be-afraid-of-whitespace"><span class="toc-number">1.1.2.</span> <span class="toc-text">Don’t be afraid of whitespace!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Color-usage"><span class="toc-number">1.1.3.</span> <span class="toc-text">Color usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Calls-to-Action-CTA"><span class="toc-number">1.1.4.</span> <span class="toc-text">Calls to Action (CTA)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tables"><span class="toc-number">1.1.5.</span> <span class="toc-text">Tables</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#General-code-guidelines"><span class="toc-number">1.2.</span> <span class="toc-text">General code guidelines</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#No-inline-style-tags"><span class="toc-number">1.2.1.</span> <span class="toc-text">No inline style tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#No-checked-in-commented-code"><span class="toc-number">1.2.2.</span> <span class="toc-text">No checked in commented code</span></a></li></ol></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Frontend Styling Primer
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Guy Bianco IV</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-08-10T09:44:11.000Z" itemprop="datePublished">2018-08-10</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Basics-of-Interface-Design"><a href="#Basics-of-Interface-Design" class="headerlink" title="Basics of Interface Design"></a>Basics of Interface Design</h1><h2 id="Styling-guidelines"><a href="#Styling-guidelines" class="headerlink" title="Styling guidelines"></a>Styling guidelines</h2><h3 id="Consistency-is-key"><a href="#Consistency-is-key" class="headerlink" title="Consistency is key"></a>Consistency is key</h3><p>First and foremost, be consistent. The more consistent you are, the less lessons the user has to learn and keep in their head (cognitive load) while using your interface.</p>
+<p>That being said, do not overload the user. Too much at once or too much “cognitive load” causes the user to become confused, annoyed, and stressed. You want your user to <em>enjoy</em> using your interface, not loathe it.</p>
+<p>Each screen or view should have a distinct purpose. The general test is if you can’t sum up what the screen does in one or two words (e.g. “user management”), then it likely needs to be broken up.</p>
+<p>Do not fall victim to the trap of counting “number of clicks”. In general, less clicks is better, but clear organization and easy understanding (i.e. “intuitiveness”) is far more important and often requires more clicks.</p>
+<h3 id="Don’t-be-afraid-of-whitespace"><a href="#Don’t-be-afraid-of-whitespace" class="headerlink" title="Don’t be afraid of whitespace!"></a>Don’t be afraid of whitespace!</h3><p>A good UI uses whitespace effectively to emphasize or to organize.</p>
+<p>Think of how you might arrange a shelf. A little bit of a gap between boxes or books goes a long way to show the imaginary compartments you’ve created on the shelf.</p>
+<p>Something that looks sparse to the original developer can still look information dense and cluttered to a user – especially their first time using it.</p>
+<p>The more things you have on screen (this even includes things like borders or background images), the more cluttered your interface looks and the more cognitive load it creates.</p>
+<p>Everything about your interface should be communicating <em>something</em> relevant to the user (even if it is communicating something more abstract like how the interface is organized).</p>
+<h3 id="Color-usage"><a href="#Color-usage" class="headerlink" title="Color usage"></a>Color usage</h3><p>Colors should not be the only way to obtain a piece of information (colorblindness is very common), but should still be used to augment the user’s experience.</p>
+<p>For example, you should have a primary color to draw the user’s attention to the “happy path” (see CTAs) button. You’ll use more warm colors to indicate “danger” or a negative response (e.g. green means affrimative, red means negative).</p>
+<h3 id="Calls-to-Action-CTA"><a href="#Calls-to-Action-CTA" class="headerlink" title="Calls to Action (CTA)"></a>Calls to Action (CTA)</h3><p>Primary actions (AKA “calls to action” or CTA) should be at the very far left or right (which one is down to style, just be consistent). Again, this is to draw the user to them quickly.</p>
+<p>For example, if the user can cancel or submit a form, then the submit button is (likely) the CTA and should be on the “outside” (far left or far right) of the form.</p>
+<h3 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h3><p>Tables are a great way to organize <em>tabular data</em>.</p>
+<p>Only include columns that are immediately relevant to the task at hand (tables can almost be thought of as “sub screens”).</p>
+<p>One view should only have one or two tables visible at the same time, <em>at most</em>.</p>
+<p>Tables are extremely information dense – use this to your advantage but be cautious.</p>
+<h2 id="General-code-guidelines"><a href="#General-code-guidelines" class="headerlink" title="General code guidelines"></a>General code guidelines</h2><p>Code is a form of interface where the computer is obviously part of your audience, but so are other developers. Both are equally important.</p>
+<p>It’s hard to make a computer understand your code, it’s even harder to make a human understand it.</p>
+<h3 id="No-inline-style-tags"><a href="#No-inline-style-tags" class="headerlink" title="No inline style tags"></a>No inline style tags</h3><p>For example, <code>&lt;h2 style=&quot;color: white;&quot;&gt;</code>)</p>
+<p>If HTML is the model, CSS is the view, and JS is the controller. Don’t mix them.</p>
+<p>Styles should be contained within their own files to promote better organization and easier maintenance.</p>
+<p>Prefer library styles over custom styles. You wouldn’t recreate a sort function if you already include a library function that does it.</p>
+<p>If you have to write a custom style, use class attributes.</p>
+<h3 id="No-checked-in-commented-code"><a href="#No-checked-in-commented-code" class="headerlink" title="No checked in commented code"></a>No checked in commented code</h3><p>Git keeps a full history, so unless there are <em>immediate</em> plans to uncomment, there’s no reason to keep unused code around cluttering it up.</p>
+<p>Make reusable components/files – Don’t Repeat Yourself (DRY)</p>
+<p>Unless it is substantially more code to do so, code (especially HTML) should not be repeated. This allows for easier maintenance and less copy/paste related bugs. Think of components like functions.</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://gbianco.itch.io/">Games</a></li>
+         
+          <li><a href="http://github.com/gjbianco">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Basics-of-Interface-Design"><span class="toc-number">1.</span> <span class="toc-text">Basics of Interface Design</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Styling-guidelines"><span class="toc-number">1.1.</span> <span class="toc-text">Styling guidelines</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Consistency-is-key"><span class="toc-number">1.1.1.</span> <span class="toc-text">Consistency is key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Don’t-be-afraid-of-whitespace"><span class="toc-number">1.1.2.</span> <span class="toc-text">Don’t be afraid of whitespace!</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Color-usage"><span class="toc-number">1.1.3.</span> <span class="toc-text">Color usage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Calls-to-Action-CTA"><span class="toc-number">1.1.4.</span> <span class="toc-text">Calls to Action (CTA)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Tables"><span class="toc-number">1.1.5.</span> <span class="toc-text">Tables</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#General-code-guidelines"><span class="toc-number">1.2.</span> <span class="toc-text">General code guidelines</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#No-inline-style-tags"><span class="toc-number">1.2.1.</span> <span class="toc-text">No inline style tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#No-checked-in-commented-code"><span class="toc-number">1.2.2.</span> <span class="toc-text">No checked in commented code</span></a></li></ol></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://gbian.co/2018/08/10/frontend-styling-primer/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://gbian.co/2018/08/10/frontend-styling-primer/&text=Frontend Styling Primer"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://gbian.co/2018/08/10/frontend-styling-primer/&is_video=false&description=Frontend Styling Primer"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Frontend Styling Primer&body=Check out this article: http://gbian.co/2018/08/10/frontend-styling-primer/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://gbian.co/2018/08/10/frontend-styling-primer/&title=Frontend Styling Primer"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://gbian.co/2018/08/10/frontend-styling-primer/&name=Frontend Styling Primer&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Guy Bianco IV
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://gbianco.itch.io/">Games</a></li>
+         
+          <li><a href="http://github.com/gjbianco">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Disqus Comments -->
+
+
